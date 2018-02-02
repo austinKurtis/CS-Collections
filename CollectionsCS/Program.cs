@@ -40,6 +40,15 @@ namespace CollectionsCS
 
             foreach (var item in fibonacciNumbers)
                 Console.WriteLine(item);
+
+            while (fibonacciNumbers.Count < 20)
+            {
+                var previous3 = fibonacciNumbers[fibonacciNumbers.Count - 1];
+                var previous4 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+                fibonacciNumbers.Add(previous3 + previous4);
+            }
+            foreach (var item in fibonacciNumbers)
+                Console.WriteLine(item);
         }
     }
 }
